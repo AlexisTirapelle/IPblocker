@@ -1,4 +1,6 @@
 const http = require('http');
+const requestIp = require('request-ip');
+
 
 // Lista de IPs ou faixas permitidas (CIDR)
 const allowedIPs = [
@@ -45,12 +47,17 @@ function isIpInRange(ipBytes, networkBytes, prefix) {
 // Criação do servidor HTTP
 const server = http.createServer((req, res) => {
 
+    const clientIps = requestIp.getClientIp(req);
+    console.log("clientIps: " + clientIps);
+
+
     console.log("req.headers: " + JSON.stringify(req.headers));
 
     console.log("x-forwarded-for: " + req.headers['x-forwarded-for']);
     console.log("req.connection.remoteAddress: " + req.connection.remoteAddress);
     console.log("req.socket.remoteAddress: " + req.socket.remoteAddress);
     console.log("req.ip: " + req.ip);
+    console.log("req.ip: " + req.ips);
 
 
     console.log("antes " + req.socket.remoteAddress);

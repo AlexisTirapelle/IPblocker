@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/AlexisTirapelle/IPblocker/issues"
   },
-  "homepage": "https://github.com/AlexisTirapelle/IPblocker#readme"
+  "homepage": "https://github.com/AlexisTirapelle/IPblocker#readme",
+  "dependencies": {
+    "request-ip": "^3.3.0"
+  }
 }
