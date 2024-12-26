@@ -5,7 +5,7 @@ const allowedIPs = [
     // { network: '161.148.0.0', prefix: 16 },  // Intervalo 161.148.0.1 a 161.148.255.254
     // { network: '189.9.0.0', prefix: 16 },    // Intervalo 189.9.0.1 a 189.9.255.254
     // { network: '200.198.192.0', prefix: 18 } // Intervalo 200.198.192.1 a 200.198.255.254
-    { network: '192.168.194.146', prefix: 32 }
+    { network: '191.177.191.204', prefix: 32 }
 ];
 
 // Função para verificar se um IP está dentro do intervalo CIDR
