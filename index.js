@@ -45,6 +45,14 @@ function isIpInRange(ipBytes, networkBytes, prefix) {
 // Criação do servidor HTTP
 const server = http.createServer((req, res) => {
 
+    console.log("req.headers: " + JSON.stringify(req.headers));
+
+    console.log("x-forwarded-for: " + req.headers['x-forwarded-for']);
+    console.log("req.connection.remoteAddress: " + req.connection.remoteAddress);
+    console.log("req.socket.remoteAddress: " + req.socket.remoteAddress);
+    console.log("req.ip: " + req.ip);
+
+
     console.log("antes " + req.socket.remoteAddress);
 
     // Obtém o IP do cliente
